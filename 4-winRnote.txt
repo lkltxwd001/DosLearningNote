@@ -1,0 +1,32 @@
+https://www.cnblogs.com/kichang/p/4771101.html
+
+calc  计算器
+notepad  记事本
+write  写字板
+mspaint  画图
+magnify  放大镜
+osk  屏幕键盘
+charmap  字符映射表
+eudcedit  专用字符编辑程序
+mstsc  远程桌面连接
+sndvol  音量合成器-扬声器
+
+taskmgr  任务管理器
+perfmon.msc  资源监视器
+winver  关于“Windows”
+explorer  资源管理器
+compmgmt.msc  计算机管理
+devmgmt.msc  设备管理器
+eventvwr.msc  事件查看器
+diskmgmt.msc  磁盘管理
+dcomcnfg  组件管理
+secpol.msc  本地安全策略
+rsop.msc  组策略结果集
+lusrmgr.msc  本地用户和组
+services.msc 服务
+regedit  注册表编辑器
+regedt32  Registry Editor Utility打开注册表编辑器
+msconfig  系统配置实用工具
+dxdiag  DirectX诊断工具
+mmc  控制台
+wmimgmt.msc  WMI控件

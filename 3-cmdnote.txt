@@ -1,0 +1,186 @@
+在cmd中输入 ipconfig
+输出 windows ip 的信息
+
+cls 清屏
+
+批处理
+
+算术运算
+
+命令模式
+set /a 1+3
+/a是算术运算的一个缩写字母
+
+文本模式
+
+重定向运算
+dir  查看文件夹下目录
+
+echo "hello world" > a.txt
+>覆盖  >>追加
+type a.txt  查看文件内容
+
+多命令运算
+&&  具有短路，左面错误不会执行右面
+||  左面正确时，右面不会执行
+
+管道符号/运算
+A | B  A命令的输出作为B命令的输入
+
+mkdir 创建一个新的目录
+find ".txt"  列出目录下所有此类型的文件
+
+netstat -an
+-a（all）：显示所有连接和监听端口。
+-n（numeric）：以数字形式显示地址和端口号。
+netstat用于显示各种网络相关信息，如网络连接、路由表、接口统计信息等。
+//若出现4444端口，极有可能是木马程序
+
+按方向键上 返回上条命令
+
+
+批处理基本命令
+主命令 子命令 参数 操作 选项
+/? 命令帮助信息查看
+/help 获取详细的帮助信息
+
+批处理文件参数传递
+.bat文件接受参数使用%num
+如 net user %1 %2 /add
+
+REM 注释符(remenber)
+
+颜色命令 color /?
+title 标题命令
+
+时间相关命令
+date   ctrl + C 结束
+date /T 显示日期星期
+time /T
+
+cd 切换目录
+
+start 启动一个单独的窗口以运行指定的程序或命令。
+start "myshell"  启动名为myshell的窗口
+start 文件名
+start /B 文件名 使用文件
+
+
+调用其他bat文件
+call
+
+任务表查看命令
+tasklist
+
+任务关闭命令
+taskkill 
+taskkill /im (image name)
+
+文件夹结构查看命令
+tree 
+tree /A /F
+tree 路径
+
+关机命令
+shutdown
+
+计划任务命令
+at
+at 22:00 /every:M,T,W,Th,F,S,Su C:\abc.exe
+每天22:00执行abc.exe
+at 21:56 "notepad.exe"
+at 2 /delete 
+2是上面新增的作业的ID
+
+批量处理环境变量
+set
+
+
+
+
+
+
+目录浏览
+dir
+
+新建目录
+mkdir
+删除目录
+rmdir 
+ed /S 要删除的文件夹名  （文件夹不为空）
+/S    /Q
+切换目录
+cd
+重命名目录
+ren rename
+ren 旧名 新名
+复制目录
+copy
+copy 要复制的文件夹 复制到的文件夹
+删除文件
+del 
+del 路径
+剪切文件 ctrl+x
+move
+move 1.txt test.txt重命名
+move 移动前的路径 移动后的路径
+
+
+
+用户操作命令
+net user
+用户组操作命令
+net localgroup查看所有用户组
+网络连通性检测命令
+ping
+ping 网址/ip地址  
+ping 127.0.0.1（本地环回网卡地址）检测网卡是否正常
+ping -1 1111111111111(很大的数) 192.168.0.1 用来检测本地最大缓冲区
+ping -1 65500 192.168.0.1  向目标发送65500大小字节的数据包
+网络连接命令
+telnet
+路由器信息查看
+tracert
+网络适配器命令
+ipconfig
+ARP信息命令
+arp 
+文件存在判断
+exist
+if exist 路径 (echo ok)
+
+
+循环结构
+遍历目录
+for /d in (路径/*) do具体操作
+for /d %%a in (*) do echo %%a
+    for /d：表示进行针对目录的循环操作。
+    %%a：是一个循环变量，在每次循环中代表一个目录的名称。
+    in (*)：表示在当前目录下进行遍历。
+    do echo %%a：表示对每个遍历到的目录名称进行输出。
+for /d %%a in (*) do if %%a==testt rd %%a
+for /d %%a in (*) do echo %%a
+遍历目录和子目录下文件
+for /r "目录途径" %%v in(匹配规则 例如 *.py) do 执行操作 %%v
+遍历数字
+for /L %%v in (start,step,end) do具体操作
+遍历文件内容
+for /F %%v in(文件名) do具体操作
+
+
+virus脚本分析
+目录重复新建代码分析
+goto
+
+计算机信息展示
+1.使用bat文件保存计算机具体内容到指定文件
+2.本地开启http服务，将指定文件放在根目录下，通过浏览器访问
+
+交互操作
+使用跳转语句goto
+
+计划执行
+at
+
+BAT转EXE程序
+Bat to Exe Converter工具
